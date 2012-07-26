@@ -20,4 +20,4 @@ approximately ordered by priority.
 * Improve metadata, semantics
 
 [pelican]: http://pelican.notmyidea.org/
-[solarized]: http://pelican.notmyidea.org/
+[solarized]: http://ethanschoonover.com/solarized
