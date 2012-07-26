@@ -5,8 +5,8 @@
 It includes two variants (light and dark), both of which are currently under development. If you would like to contribute: do it!
 
 ## Screenshots
-![Scrennshot of the light variant](./screenshot_light.png)
-![Scrennshot of the dark variant](./screenshot_dark.png)
+![Scrennshot of the light variant](https://github.com/phaer/pelican-solarized/raw/master/screenshot_light.png)
+![Scrennshot of the dark variant](https://github.com/phaer/pelican-solarized/raw/master/screenshot_dark.png)
 
 ## Todos
 approximately ordered by priority.
