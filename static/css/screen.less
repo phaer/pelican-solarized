@@ -1,0 +1,160 @@
+@font-size: 16;
+
+html, body { height: 101%; }
+
+body {
+    margin: 0;
+    font-family: 'Maven Pro', cursive;
+    font-size: @font-size * 1px;
+    line-height: 1.5;
+    //background: transparent url("../images/background.png") top left repeat;
+}
+
+.header(@size, @line-height: 2) {
+    font-size: @size * 1em;
+    line-height: (@line-height * 1.5) / @size;
+    margin: (1 / @size) * 1.5em 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Amaranth', sans-serif;
+    font-weight: normal;
+}
+h1 { .header (2); }
+h2 { .header (1.5); }
+h3 { .header (1.2); }
+h4 { .header (1, 1); }
+
+a {
+    text-decoration: none;
+
+    &:hover { text-decoration: underline; }
+}
+
+p {
+    margin: 1.5em 0;
+}
+
+code {
+    font-size: @font-size - 2px;
+}
+
+.codehilite {
+    margin: 1.5em 0;
+    padding: 1.5em;
+    border: 1px solid transparent;
+
+    border-radius: 0.5em;
+    overflow: auto;
+}
+
+pre {
+    font-family: 'Inconsolata', monospace;
+    font-size: 0.9em;
+}
+
+ul {
+    margin: 1.5em 0;
+    padding-left: 1.5em;
+    list-style-type: square;
+}
+
+#page {
+    max-width: 42em;
+    margin: 0 auto;
+
+    > header {
+	border-bottom: 0.1em solid transparent;
+	margin: 0 3em;
+	padding: 1.4em 0;
+        
+	h1 {
+            float: left;
+	    margin: 0;
+	}
+        
+	a {
+	    text-decoration: none;
+            
+	    &:hover { text-decoration: underline; }
+	}
+        
+	> nav {
+            text-align: right;
+            vertical-align: bottom;
+            
+	    ul {
+		margin: 0.75em 0;
+		padding: 0;
+                
+		li {
+		    display: inline;
+		    padding-left: 1em;
+		}
+	    }
+	}
+    }
+    
+    
+    > #content {
+	padding: 0 3em;
+    }
+    
+    > footer {
+	border-top: 0.1em solid transparent;
+	text-align: center;
+	padding: 1.5em 0em;
+	margin: 0 3em;
+
+    }
+}
+
+.article.list,
+.article.single {
+    header {
+	.seperator {
+	    padding: 0 0.5em;
+	}
+	.date {
+	    font-size: 0.6em;
+	    font-weight: normal;
+	}	
+    }
+}
+
+.article.list {
+    .article.item {
+	border-top: 0.1em solid transparent;
+
+	.title {
+	    margin: -0.1em 0 0 0;
+	}
+    }
+}
+
+.comments {
+    padding: 1.5em;
+    border-top: 0.1em solid transparent;
+    text-align: center;
+
+    p {margin :0}
+}
+
+.no-margin(@margin: 1.5em) {
+    margin: @margin (@margin * -2);
+    padding: @margin (@margin * 2);
+}
+
+.notice {
+    .no-margin;
+
+    border: 1px solid transparent;
+    border-left: none;
+    border-right: none;
+
+    p { margin: 0; }
+}
+
+.hidden {
+    display: none;
+}

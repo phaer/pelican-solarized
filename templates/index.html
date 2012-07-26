@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Texts{% endblock title %}
+
+{% block content %}
+{% for article in articles %}
+<section class="article list">
+  <article class="article item hentry">
+    <header>
+      <h3 class="title">
+        <a  rel="bookmark" title="Permalink to {{ article.title}}" 
+            href="{{ SITEURL }}/{{ article.url }}">
+          {{ article.title }}
+        </a>
+        <span class="seperator">»</span>
+        <time class="date" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+      </h3> 
+    </header>
+  </article>
+</section>
+{% endfor %}
+{% endblock content %}

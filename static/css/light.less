@@ -1,0 +1,67 @@
+@import 'solarized';
+
+@content: @base01;
+@backgroundd: @base2;
+@backgroundl: @base3;
+@accent: @orange;
+@links: @accent;
+
+body {
+    color: @content;
+    background-color: @backgroundl;
+}
+
+a { color: @links; }
+
+.codehilite {
+    background-color: @backgroundd;
+    border-color: @orange;
+
+    /* box-shadow declaration is included here, because there is currently no
+     * way to split it from its color declaration as far as i know.
+     */
+    box-shadow: inset 1px 1px 5px 5px darken(@backgroundd, 2%);
+}
+
+#page {
+    background-color: @backgroundl;
+    box-shadow: 0 0 20px 2px #ccc;
+
+    > header {
+	border-color: @accent;
+
+        a { color: @content; }
+    }
+
+    > footer {
+        border-color: @accent;
+    }
+}
+
+.article.list,
+.article.single {
+    header {
+        h2 a, h3 a, h4 a, h5 a, h6 a {
+	    color: @content;
+        }
+
+	.seperator {
+	    color: @accent;
+        }
+    }
+}
+
+.article.list {
+    .article.item {
+	border-color: @magenta;
+    }
+}
+
+.comments {
+    border-color: @accent;
+}
+
+.notice {
+    border-color: @yellow;
+    background-color: @backgroundd;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ SITENAME }} &laquo; {% block title %}Unknown{% endblock title %}</title>
+    <meta charset="utf-8"></meta>
+
+    {% block head %}
+
+    <!-- css -->
+    <link href="http://fonts.googleapis.com/css?family=Amaranth|Maven+Pro:400,700|Inconsolata" rel="stylesheet" type="text/css">
+
+    <link href="{{ SITEURL }}/theme/css/normalize.css" media="screen, projection" rel="stylesheet"></link>
+    <link href="{{ SITEURL }}/theme/css/screen.css" media="screen, projection" rel="stylesheet"></link>
+    <link href="{{ SITEURL }}/theme/css/dark.css" media="screen, projection" rel="stylesheet"></link>
+    <link href="{{ SITEURL }}/theme/css/light.css" media="screen, projection" rel="stylesheet"></link>
+    <link href="{{ SITEURL }}/theme/css/code.css" media="screen, projection" rel="stylesheet"></link>
+
+    <!-- info -->
+    <meta name="author" content="{{ AUTHOR }}"></meta>
+    <meta name="description" content="{{ DESCRIPTION }}"></meta>
+
+    {% endblock head %}
+  </head>
+  <body>
+    <div id="page">
+      <header class="page">
+	<h1>
+	  <a href="{{ SITEURL }}" title="Home">{{ SITENAME }}</a>
+	</h1>
+	<nav>
+	  <ul>
+            {% for title, link in MENUITEMS %}
+            <li><a href="{{ link }}">{{ title }}</a></li>
+            {% endfor %}
+       	</nav>     
+      </header>
+
+      <section id="content">
+        {% block content %}
+        {% endblock %}
+      </section>
+
+
+      <footer>
+        {% block footer %}
+	<a href="./atom.xml" title="Feed(Atom)">atom</a> ·
+	<a href="./rss.xml" title="Feed (RSS)">rss</a> ·
+	html5 ·
+	css3 ·
+	<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/at/" title="Creative Commons Attribution Noncommercial Share-alike License" rel="license">cc by-nc-sa</a> ·
+        <a class="switch-theme"></a>
+        {% endblock footer %}
+      </footer>
+    </div>
+
+    <!-- javascript -->
+    {% block javascript %}
+    <script type="text/javascript" src="/theme/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/theme/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/theme/js/theme-variants.js"></script>
+    {% endblock javascript %}
+  </body>
+</html>
+
