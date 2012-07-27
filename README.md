@@ -2,12 +2,13 @@
 
 ...is a minimal theme for [pelican][pelican], a static site generator, based on the [solarized][solarized] color scheme.
 
-It includes two variants (light and dark), both of which are currently under development. If you would like to contribute: do it!
+It includes two variants (light and dark), which can be switched on the fly using a link at the bottom of the page.
+
+This theme is currently under development. If you would like to contribute: do it!
 
 ## Screenshots
 ![Scrennshot of the light variant](https://github.com/phaer/pelican-solarized/raw/master/screenshot_light.png)
 ![Scrennshot of the dark variant](https://github.com/phaer/pelican-solarized/raw/master/screenshot_dark.png)
-
 ## Todos
 approximately ordered by priority.
 
@@ -21,3 +22,4 @@ approximately ordered by priority.
 
 [pelican]: http://pelican.notmyidea.org/
 [solarized]: http://ethanschoonover.com/solarized
+
