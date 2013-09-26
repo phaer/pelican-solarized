@@ -9,11 +9,9 @@
     <!-- css -->
     <link href="http://fonts.googleapis.com/css?family=Amaranth|Maven+Pro:400,700|Inconsolata" rel="stylesheet" type="text/css">
 
-    <link href="{{ SITEURL }}/theme/css/normalize.css" media="screen, projection" rel="stylesheet"></link>
-    <link href="{{ SITEURL }}/theme/css/screen.css" media="screen, projection" rel="stylesheet"></link>
-    <link href="{{ SITEURL }}/theme/css/dark.css" media="screen, projection" rel="stylesheet"></link>
-    <link href="{{ SITEURL }}/theme/css/light.css" media="screen, projection" rel="stylesheet"></link>
-    <link href="{{ SITEURL }}/theme/css/code.css" media="screen, projection" rel="stylesheet"></link>
+    {% assets filters="less,cssmin", output="css/style.min.css", "css/normalize.css", "css/screen.less", "css/dark.less", "css/light.less", "css/code.css" %}
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+    {% endassets %}
 
     <!-- info -->
     <meta name="author" content="{{ AUTHOR }}"></meta>
